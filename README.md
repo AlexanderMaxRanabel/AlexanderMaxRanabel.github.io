@@ -5,6 +5,9 @@
 - Due to my inexperience with Frontend development I decided to just write plain markdown but i am planning to switch to Jekyll instead soon
 - God I wish there was a much faster way to deploy these
 
+19th of May 2023:
+- I am seriously considering switching to Radicle once i get the basics but there is some concerns like project discoverebilty
+
 # Random 
 - QuteBrowser is not that good
 - Emacs > Vim. Vim users has an unnecesary supeority complex
