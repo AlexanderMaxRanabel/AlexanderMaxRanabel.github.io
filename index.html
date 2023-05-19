@@ -1,0 +1,41 @@
+<div id="app">
+  <ul>
+    <li v-for="page in pages" :key="page">
+      <a :href="getPageUrl(page)">{{ page }}</a>
+    </li>
+  </ul>
+  <div v-html="currentPageContent"></div>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      pages: ['page1', 'page2', 'page3'], // Add the names of your Markdown pages here
+      currentPage: '',
+      currentPageContent: ''
+    },
+    methods: {
+      getPageUrl(page) {
+        return '#' + page;
+      },
+      loadPage(page) {
+        fetch('pages/' + page + '.md')
+          .then(response => response.text())
+          .then(content => {
+            this.currentPage = page;
+            this.currentPageContent = content;
+          });
+      }
+    },
+    created() {
+      const initialPage = window.location.hash.replace('#', '');
+      this.loadPage(initialPage || this.pages[0]);
+
+      window.addEventListener('hashchange', () => {
+        const newPage = window.location.hash.replace('#', '');
+        this.loadPage(newPage);
+      });
+    }
+  });
+</script>
