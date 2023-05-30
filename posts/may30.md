@@ -5,7 +5,7 @@ On the other hand i have been working on a new programming language / assembly i
 Its a very low level language that works on a grid system.
 
 Here is an example in TNL as i work on it:
-
+```
 0023 0000 0000
 +&par0 0000 0000
 22+&p 0000 0000
@@ -25,7 +25,7 @@ Here is an example in TNL as i work on it:
 0000 0000 0000
 0000 0000 0000
 0000 0000 0000
-
+```
 *
 
 As you can see most of the language looks like non sense since the name.
